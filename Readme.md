@@ -1,8 +1,4 @@
-Absolutely! Here’s a clean and beginner-friendly `README.md` for your **NileMarket** project. It explains what the project does, how to run it, and how it's structured.
 
----
-
-```markdown
 # 🛍️ NileMarket
 
 **NileMarket** is a student-centered, campus-based web marketplace that allows users within the Nile University community to buy and sell items like phones, books, shoes, clothes, and more — just like Jiji, but localized for campus life.
