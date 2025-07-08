@@ -1,0 +1,506 @@
+/* Reset & Base Styles */
+/* src/index.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+}
+
+
+
+body {
+  background-color: #BDDDFC;
+  color: #384959;
+  min-height: 100vh;
+}
+
+
+/* Container Styles */
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  min-height: 100vh;
+  gap: 1rem;
+}
+
+.auth-box {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(56, 73, 89, 0.1);
+}
+
+.auth-box h2 {
+  color: #6A89A7;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.auth-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.auth-box select {
+  padding: 0.75rem;
+  border: 1px solid #6A89A7;
+  border-radius: 8px;
+  background-color: #BDDDFC;
+  color: #384959;
+  font-size: 1rem;
+  appearance: none; /* Removes default arrow styling in some browsers */
+  outline: none;
+}
+
+.auth-box select {
+  padding: 0.75rem;
+  border: 1px solid #6A89A7;
+  border-radius: 8px;
+  background-color: #BDDDFC;
+  color: #384959;
+  font-size: 1rem;
+  outline: none;
+  appearance: none; /* Hide default arrow */
+
+  /* Custom arrow icon */
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon fill='%23384959' points='70,100 20,40 120,40'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem;
+}
+
+
+.auth-box select:focus {
+  border-color: #88BDF2;
+}
+
+
+.auth-box input {
+  padding: 0.75rem;
+  border: 1px solid #6A89A7;
+  border-radius: 8px;
+  background-color: #BDDDFC;
+  color: #384959;
+  outline: none;
+}
+
+.auth-box input:focus {
+  border-color: #88BDF2;
+}
+
+.auth-box button {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #6A89A7;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.auth-box button:hover {
+  background-color: #88BDF2;
+}
+
+/* Logo Placeholder */
+.logo {
+  width: 250px;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .auth-box {
+    padding: 1.5rem;
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-box h2 {
+    font-size: 1.2rem;
+  }
+
+  .auth-box input,
+  .auth-box button {
+    font-size: 0.95rem;
+  }
+}
+
+/* NAVBAR */
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #6A89A7;
+  padding: 0.75rem 1.5rem;
+  position: relative;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.2rem;
+  list-style: none;
+}
+
+.nav-links li {
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links li:hover {
+  color: #BDDDFC;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #6A89A7;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+
+
+/* FEED */
+.feed-container {
+  padding: 1rem;
+}
+
+.item-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.item-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(56, 73, 89, 0.1);
+}
+
+.item-card h3 {
+  color: #384959;
+  margin: 0.5rem 0;
+}
+
+.item-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+/* LOGO STYLE (already exists, just for reference) */
+.logo {
+  height: 130px;
+  width: 120px;
+}
+
+.search-bar {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.75rem;
+  border: 1px solid red;
+  border-radius: 8px;
+  background-color: #BDDDFC;
+  color: #384959;
+  font-size: 1rem;
+  margin: 1rem auto;
+  display: block;
+}
+
+.filter-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+
+.filter-controls select {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid red;
+  background-color: #BDDDFC;
+  color: #384959;
+}
+
+.search-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+  height: 130px;
+}
+
+.search-group {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  border: none;
+  border-radius: 6px;
+  padding: 0.3rem;
+  max-width: 600px;
+  width: 100%;
+  
+}
+
+.search-bar {
+  flex: 1;
+  padding: 0.6rem 0.8rem;
+  border: none;
+  background: transparent;
+  color: #384959;
+  font-size: 1rem;
+  border-radius: 6px;
+  outline: none;
+  border-bottom: 2px solid #6A89A7; 
+}
+
+.search-bar:focus {
+  border-bottom: 2px solid #88BDF2; /* 👈 Underline glows when focused */
+}
+
+.search-button {
+  padding: 0.6rem 1rem;
+  background-color: #6A89A7;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #88BDF2;
+}
+
+/* FILTER DROPDOWN */
+.filter-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-container select {
+  padding: 0.5rem 1rem;
+  border: 1px solid #6A89A7;
+  border-radius: 6px;
+  background-color: #BDDDFC;
+  color: #384959;
+  font-size: 0.95rem;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 480px) {
+  .search-group {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+    padding: 0.8rem;
+  }
+
+  .search-button {
+    width: 100%;
+  }
+
+  .filter-container {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+}
+
+
+.view-button {
+  margin-top: 10px;
+  padding: 8px 14px;
+  background-color: #6A89A7;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.view-button:hover {
+  background-color: #384959;
+}
+
+.logo {
+  width: 150px; /* Adjust width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+
+/* Auth container should have enough space for the logo */
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+/* Logo styles */
+.logo {
+  width: 180px !important; /* Increase width */
+  height: auto !important; /* Maintain aspect ratio */
+  margin-bottom: 2rem; /* Add some space between logo and form */
+}
+
+/* Styling for the auth box */
+.auth-box {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth-box h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+/* Add responsive styling if needed */
+@media (max-width: 768px) {
+  .logo {
+    width: 140px !important;  /* Reduce width for smaller screens */
+  }
+}
+
+
+/* dashboad fix */
+/* Dashboard Item Grid */
+.item-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.item-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.item-card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px;
+  background-color: #6A89A7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #88BDF2;
+}
+
+.contact-button {
+  background-color: #FF6347; /* Red for Contact */
+}
+
+.contact-button:hover {
+  background-color: #FF4500;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .items-grid {
+    grid-template-columns: 1fr;  /* One card per row on mobile */
+  }
+
+  .item-card {
+    padding: 10px;
+  }
+
+  .search-bar, .filter-container select {
+    width: 100%; /* Full-width inputs */
+  }
+}
+
+/* Style for the remove button (X) */
+.remove-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #ff0000; /* Red color for the X */
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.remove-button:hover {
+  transform: scale(1.2); /* Slightly enlarge the X on hover for a more interactive feel */
+}
+
+/* Optional: Style the item card to ensure the remove button is properly placed */
+.item-card {
+  position: relative; /* Ensure the button is positioned relative to the card */
+  border: 1px solid #ddd; /* Add a light border for better item card visibility */
+  border-radius: 8px; /* Rounded corners */
+  padding: 15px;
+  margin: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff; /* Background color for the item card */
+  transition: box-shadow 0.2s ease;
+}
+
+.item-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Add a subtle shadow effect on hover */
+}

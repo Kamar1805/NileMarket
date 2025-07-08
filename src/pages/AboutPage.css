@@ -1,0 +1,133 @@
+/* General Styling */
+.about-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #384959;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 45px;
+  transition:  3s ease-in-out;
+  animation-duration: 2s;
+}
+
+.about-header h1 {
+  font-size: 56px;
+  color: #6A89A7;
+  animation: name duration timing-function delay iteration-count direction fill-mode;
+  transition:  3s ease-in-out;
+  animation-duration: 2s;
+}
+
+.about-header p {
+  font-size: 18px;
+  color: black;
+}
+
+.about-section {
+  margin-bottom: 40px;
+}
+
+.about-section h2 {
+  font-size: 28px;
+  color: #6A89A7;
+}
+
+.about-section p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.about-section ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  font-size: 16px;
+}
+
+.about-section ul li {
+  margin-bottom: 10px;
+}
+
+/* Logo Placeholder */
+.logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .auth-box {
+    padding: 1.5rem;
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-box h2 {
+    font-size: 1.2rem;
+  }
+
+  .auth-box input,
+  .auth-box button {
+    font-size: 0.95rem;
+  }
+}
+
+/* NAVBAR */
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #6A89A7;
+  padding: 0.75rem 1.5rem;
+  position: relative;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.2rem;
+  list-style: none;
+}
+
+.nav-links li {
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links li:hover {
+  color: #BDDDFC;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #6A89A7;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
