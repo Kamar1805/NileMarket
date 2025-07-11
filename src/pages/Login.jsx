@@ -63,7 +63,7 @@ const Login = () => {
     <div className="auth-container">
       <img src="/NILEANHUB.png" alt="NileMarket Logo" className="logo" />
       <div className="auth-box">
-        <h2>Login to NileMarket</h2>
+        <h2>Login to Nileanhub</h2>
         <form onSubmit={handleLogin}>
           <input
             type="email"
