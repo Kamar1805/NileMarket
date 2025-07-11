@@ -117,6 +117,7 @@ const Dashboard = () => {
   return (
     <div>
       {/* NAVBAR */}
+      {menuOpen && <div className="nav-overlay" onClick={() => setMenuOpen(false)}></div>}
       <nav className="nav-bar">
         <img src="/logon.png" alt="NileMarket Logo" className="logo" />
         <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
@@ -131,6 +132,9 @@ const Dashboard = () => {
           {user && <li onClick={handleLogout}>Logout</li>}
         </ul>
       </nav>
+      {/* Overlay for mobile nav */}
+
+
 
       {/* SEARCH + FILTERS */}
       <div className="feed-container">

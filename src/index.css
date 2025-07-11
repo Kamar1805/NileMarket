@@ -196,7 +196,6 @@ body {
   color: #BDDDFC;
 }
 
-/* Mobile responsive styles */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
@@ -205,26 +204,38 @@ body {
   .nav-links {
     position: fixed;
     top: 0;
-    right: -100%; /* hide off-screen initially */
+    right: -30px; /* Hide off-screen initially */
     height: 100vh;
-    width: 70%;
+    width: 25px; /* Make it look like a sidebar */
     background-color: #6A89A7;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 2rem;
     display: flex;
     transition: right 0.3s ease-in-out;
-    z-index: 999;
+    z-index: 1000;
   }
 
   .nav-links.show {
-    right: 0; /* slide in */
+    right: 0; /* Slide in */
   }
 
   .nav-links li {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    color: white;
+    font-weight: 600;
   }
+}
+
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.4); /* semi-transparent black */
+  z-index: 500;
 }
 
 /* FEED */
@@ -387,7 +398,7 @@ body {
 .view-button {
   margin-top: 10px;
   padding: 8px 14px;
-  background-color: #6A89A7;
+  background-color: #384959;
   color: white;
   border: none;
   border-radius: 6px;
@@ -485,7 +496,8 @@ button:hover {
 }
 
 .contact-button {
-  background-color: #FF6347; /* Red for Contact */
+  background-color: black; /* Red for Contact */
+  color: white;
 }
 
 .contact-button:hover {
@@ -575,4 +587,81 @@ button:hover {
 
 .footer-link:hover {
   text-decoration: underline;
+}
+
+/* NAVBAR */
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #6A89A7;
+  padding: 0.75rem 1.5rem;
+  position: relative;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.2rem;
+  list-style: none;
+}
+
+.nav-links li {
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links li:hover {
+  color: #BDDDFC;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Hidden offscreen */
+    height: 100vh;
+    width: 250px; /* Sidebar width */
+    background-color: #6A89A7;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    display: flex;
+    transition: right 0.3s ease-in-out;
+    z-index: 1001; /* Above overlay */
+  }
+
+  .nav-links.show {
+    right: 0; /* Slide into view */
+  }
+
+  .nav-links li {
+    font-size: 1.1rem;
+    color: white;
+    font-weight: 600;
+  }
+
+  .nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1000; /* Behind sidebar */
+  }
 }
