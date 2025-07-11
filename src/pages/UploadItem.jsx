@@ -73,7 +73,7 @@ const UploadItem = () => {
         createdAt: serverTimestamp(),
       });
 
-      navigate('/dashboard');
+      navigate('/');
     } catch (err) {
       setError('Upload failed. Please try again.');
       console.error('Error during upload:', err);
@@ -84,7 +84,7 @@ const UploadItem = () => {
 
   return (
     <div className="auth-container">
-      <img src="/logo.png" alt="NileMarket Logo" className="logo" />
+      <img src="/NILEANHUB.png" alt="NileMarket Logo" className="logo" />
       <div className="auth-box" style={{ maxWidth: '600px' }}>
         <h2>Upload Item for Sale</h2>
         <form onSubmit={handleSubmit}>

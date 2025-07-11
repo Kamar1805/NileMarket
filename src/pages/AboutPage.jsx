@@ -30,18 +30,16 @@ const AboutPage = () => {
       </nav>
 
       <header className="about-header">
-        <h1>About NileMarket</h1>
-        <p>Your trusted marketplace for the Nile University community.</p>
+        <h1>About NileanHub</h1>
+        <p>Your trusted marketplace for the Nile University co.</p>
       </header>
 
       <section className="about-section">
-        <h2>About NileMarket</h2>
+        <h2>About Nilean Hub</h2>
         <p>
-          NileMarket is a platform designed to cater specifically to the Nile
-          University of Nigeria community. It provides a safe and easy space
-          for students and staff to buy and sell items, creating a thriving
-          marketplace where university members can connect with each other and
-          meet their needs.
+          NileanHub is a peer to peer marketplace platform designed to cater for the Nile university community. 
+          it provides a safe and easy space for students and staff members to buy and sell their items, creating a thriving marketplace where university members 
+          can connect with ech other and meet their needs.
         </p>
       </section>
 
@@ -61,7 +59,7 @@ const AboutPage = () => {
       <section className="about-section">
         <h2>Mission and Values</h2>
         <p>
-          At NileMarket, our mission is to create a trusted and accessible
+          At NileanHub, our mission is to create a trusted and accessible
           marketplace exclusively for the Nile University community. We believe
           in fostering a collaborative environment where students and staff can
           interact, buy, sell, and connect with ease. We uphold values of trust,
@@ -70,9 +68,9 @@ const AboutPage = () => {
       </section>
 
       <section className="about-section">
-        <h2>How NileMarket Benefits the Nile University Community</h2>
+        <h2>How NileanHub Benefits the Nile University Community</h2>
         <p>
-          NileMarket benefits the Nile University community by providing a
+          NileanHub benefits the Nile University community by providing a
           reliable, user-friendly platform for students and staff to trade items.
           Whether you are selling used textbooks, electronics, or personal items,
           NileMarket provides a secure and easy way to make transactions. Students
@@ -82,7 +80,7 @@ const AboutPage = () => {
       </section>
 
       <section className="about-section">
-        <h2>NileMarket Features</h2>
+        <h2>NileanHub Features</h2>
         <ul>
           <li>Secure login for university members only.</li>
           <li>Post items for sale with a simple form.</li>
@@ -93,15 +91,15 @@ const AboutPage = () => {
       </section>
 
       <section className="about-section">
-        <h2>Founder’s Message</h2>
+        <h2>Our Message</h2>
         <p>
-          "I created NileMarket to offer the Nile University community a seamless,
+          NileanHub was created to offer students and members of the university a seamless,
           secure, and efficient way to exchange goods. My vision is to build a
           platform where students and staff can easily connect and support one
           another in their academic and personal lives. I believe this platform
           will strengthen our university community and foster collaboration."
         </p>
-        <p>- [Your Name]</p>
+        <p>- KamarThinks Innovations ©  2025</p>
       </section>
 
       <section className="about-section">
@@ -110,9 +108,9 @@ const AboutPage = () => {
           For inquiries, support, or suggestions, please feel free to contact us at:
         </p>
         <ul>
-          <li>Email: support@nilemarket.com</li>
-          <li>Phone: +234 123 4567</li>
-          <li>Or visit our campus office located at the Nile University Administration Building.</li>
+          <li>Email: support@nileanhub.com</li>
+          <li>Phone: +234 814 310 4084</li>
+          
         </ul>
       </section>
     </div>

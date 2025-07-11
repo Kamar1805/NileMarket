@@ -88,7 +88,7 @@ const Dashboard = () => {
     <div>
       {/* NAVBAR */}
       <nav className="nav-bar">
-        <img src="/logo.png" alt="NileMarket Logo" className="logo" />
+        <img src="/logon.png" alt="NileMarket Logo" className="logo" />
         <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
           ☰
         </div>
@@ -168,6 +168,7 @@ const Dashboard = () => {
                 >
                   Contact Buyer
                 </button>
+               
                 <button
                   onClick={() => navigate(`/view/${item.id}`)}
                   className="view-button"
@@ -179,6 +180,23 @@ const Dashboard = () => {
           </div>
         )}
       </div>
+
+      {/* Footer */}
+      <footer className="footer">
+        <div className="footer-content">
+          <div className="footer-links">
+            <a href="/about" className="footer-link">About Us</a>
+            <a href="/contact" className="footer-link">Contact</a>
+            
+            <a href="/privacy" className="footer-link">Privacy Policy</a>
+          </div>
+          
+        </div>
+        <br />
+        <br />
+        
+        <p>&copy; 2025 NileAnHub. All Rights Reserved.</p>
+      </footer>
     </div>
   );
 };

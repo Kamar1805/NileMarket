@@ -11,31 +11,18 @@
 
 
 body {
-  background-color: #BDDDFC;
+  background-color: white;
   color: #384959;
   min-height: 100vh;
 }
 
 
 /* Container Styles */
-.auth-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  min-height: 100vh;
-  gap: 1rem;
-}
 
-.auth-box {
-  background-color: white;
-  padding: 2rem;
-  border-radius: 10px;
-  width: 100%;
-  max-width: 400px;
-  box-shadow: 0 4px 12px rgba(56, 73, 89, 0.1);
-}
+  .logo {
+    margin-left: 0;  /* Remove the margin for the logo on smaller screens */
+  }
+
 
 .auth-box h2 {
   color: #6A89A7;
@@ -109,6 +96,45 @@ body {
 .auth-box button:hover {
   background-color: #88BDF2;
 }
+
+.auth-container {
+  display: flex;
+  justify-content: space-between;  /* Space the logo and login box to the left and right */
+  align-items: center;  /* Vertically align the elements to the center */
+  height: 100vh;  /* Full viewport height */
+  padding: 0 20px;
+}
+
+.logo {
+  width: 150px;  /* Adjust the width of the logo */
+  height: auto;  /* Maintain aspect ratio */
+}
+
+.auth-box {
+  width: 40%;  /* Adjust the width of the login container */
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .auth-container {
+    flex-direction: column;  /* Stack logo and auth-box vertically on smaller screens */
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .auth-box {
+    width: 80%;  /* Adjust the width of the login box for smaller screens */
+  }
+
+  .logo {
+    margin-bottom: 20px;  /* Add space between the logo and login box on smaller screens */
+  }
+}
+
 
 /* Logo Placeholder */
 .logo {
@@ -206,7 +232,7 @@ body {
 }
 
 .item-card {
-  background-color: white;
+  background-color:#384959;
   border-radius: 12px;
   padding: 1rem;
   box-shadow: 0 4px 10px rgba(56, 73, 89, 0.1);
@@ -360,6 +386,7 @@ body {
   cursor: pointer;
   font-weight: bold;
   transition: background-color 0.3s ease;
+  margin-left: 5px;
 }
 
 .view-button:hover {
@@ -422,8 +449,8 @@ body {
 }
 
 .item-card {
-  background-color: #fff;
-  border: 1px solid #ddd;
+  background-color: #384959;
+  
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -492,15 +519,52 @@ button:hover {
 /* Optional: Style the item card to ensure the remove button is properly placed */
 .item-card {
   position: relative; /* Ensure the button is positioned relative to the card */
-  border: 1px solid #ddd; /* Add a light border for better item card visibility */
+  border: 2px solid #BDDDFC; /* Add a light border for better item card visibility */
   border-radius: 8px; /* Rounded corners */
   padding: 15px;
   margin: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  background-color: #fff; /* Background color for the item card */
+  background-color: white; /* Background color for the item card */
   transition: box-shadow 0.2s ease;
 }
 
 .item-card:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Add a subtle shadow effect on hover */
+}
+
+
+/* Footer Styles */
+.footer {
+  background-color: #384959;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
 }

@@ -8,16 +8,18 @@ import Dashboard from './pages/Dashboard';
 import ViewProduct from './components/ViewProduct';
 import AboutPage from './pages/AboutPage';
 
+
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/upload" element={<UploadItem />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/" element={<Dashboard />} />
         <Route path="/view/:id" element={<ViewProduct />} />
         <Route path='/AboutPage' element={<AboutPage />} />
+        
       </Routes>
     </Router>
   );
