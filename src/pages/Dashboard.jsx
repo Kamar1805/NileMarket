@@ -225,7 +225,7 @@ const Dashboard = () => {
           </div>
         </div>
         <br /><br />
-        <p>&copy; 2025 NileAnHub. All Rights Reserved.</p>
+        <p>&copy; 2025 KamarThinks Innovations. All Rights Reserved.</p>
       </footer>
     </div>
   );
