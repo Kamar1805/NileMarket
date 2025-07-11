@@ -53,7 +53,7 @@ const Login = () => {
         });
       }
 
-      navigate('/dashboard');
+      navigate('/');
     } catch (err) {
       setError(err.message);
     }

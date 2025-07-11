@@ -203,21 +203,29 @@ body {
   }
 
   .nav-links {
-    position: absolute;
-    top: 100%;
-    left: 0;
+    position: fixed;
+    top: 0;
+    right: -100%; /* hide off-screen initially */
+    height: 100vh;
+    width: 70%;
     background-color: #6A89A7;
-    width: 100%;
     flex-direction: column;
     align-items: center;
-    display: none;
+    justify-content: center;
+    gap: 1.5rem;
+    display: flex;
+    transition: right 0.3s ease-in-out;
+    z-index: 999;
   }
 
   .nav-links.show {
-    display: flex;
+    right: 0; /* slide in */
+  }
+
+  .nav-links li {
+    font-size: 1.2rem;
   }
 }
-
 
 /* FEED */
 .feed-container {
